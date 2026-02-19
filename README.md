@@ -21,7 +21,7 @@ A simple terminal-based math game built with C# where players answer randomly ge
 2. Clone or Download this repository.
 
    ```bash
-   git clone
+   git clone git@github.com:JurisNomos/Game.git
    ```
 
 3. Navigate to the project folder.
