@@ -4,7 +4,8 @@ var name = Console.ReadLine();
 var date = DateTime.UtcNow;
 
 Console.WriteLine("---");
-Console.WriteLine($"Hello {name}. It's {date}. This is your math's game. That's great that you're working on improving yourself\n");
+Console.WriteLine($"Hello {name}. It's {date}. This is your math's game. That's great that you're working on improving yourself");
+Console.WriteLine("\n");
 Console.WriteLine(@$"What game would you like to play today? Choose from the options below: 
 A - Addition
 S - Subtraction
@@ -17,19 +18,19 @@ var gameSelected = Console.ReadLine();
 
 if (gameSelected.Trim().ToLower() == "a")
 {
-    Console.WriteLine("Addition game selected");
+    AdditionGame("Addition game selected");
 }
 else if (gameSelected.Trim().ToLower() == "s")
 {
-    Console.WriteLine("Subtraction game selected");
+    SubtractionGame("Subtraction game selected");
 }
 else if (gameSelected.Trim().ToLower() == "m")
 {
-    Console.WriteLine("Multiplication game selected");
+    MultiplicationGame("Multiplication game selected");
 }
 else if (gameSelected.Trim().ToLower() == "d")
 {
-    Console.WriteLine("Division game selected");
+    DivisionGame("Division game selected");
 }
 else if (gameSelected.Trim().ToLower() == "q")
 {
@@ -40,3 +41,24 @@ else
 {
     Console.WriteLine("Invalid input");
 }
+
+void AdditionGame(String message)
+{
+    Console.WriteLine(message);
+}
+
+void SubtractionGame(String message)
+{
+    Console.WriteLine(message);
+}
+
+void MultiplicationGame(String message)
+{
+    Console.WriteLine(message);
+}
+
+void DivisionGame(String message)
+{
+    Console.WriteLine(message);
+}
+
