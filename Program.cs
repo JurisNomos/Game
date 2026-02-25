@@ -17,38 +17,47 @@ void Menu(string name)
     Console.WriteLine("---");
     Console.WriteLine($"Hello {name}. It's {date}. This is your math's game. That's great that you're working on improving yourself");
     Console.WriteLine("\n");
-    Console.WriteLine(@$"What game would you like to play today? Choose from the options below: 
+
+    var isGameOn = true;
+
+    do
+    {
+        Console.Clear();
+        Console.WriteLine(@$"What game would you like to play today? Choose from the options below: 
 A - Addition
 S - Subtraction
 M - Multiplication
 D - Division
 Q - Quit the program");
-    Console.WriteLine("---");
+        Console.WriteLine("---");
 
-    var gameSelected = Console.ReadLine();
+        var gameSelected = Console.ReadLine();
 
-    switch (gameSelected.Trim().ToLower())
-    {
-        case "a":
-            AdditionGame("Addition game");
-            break;
-        case "s":
-            SubtractionGame("Subtraction game");
-            break;
-        case "m":
-            MultiplicationGame("Multiplication game");
-            break;
-        case "d":
-            DivisionGame("Division game");
-            break;
-        case "q":
-            Console.WriteLine("Goodbye");
-            break;
-        default:
-            Console.WriteLine("Invalid input");
-            Environment.Exit(1);
-            break;
+        switch (gameSelected.Trim().ToLower())
+        {
+            case "a":
+                AdditionGame("Addition game");
+                break;
+            case "s":
+                SubtractionGame("Subtraction game");
+                break;
+            case "m":
+                MultiplicationGame("Multiplication game");
+                break;
+            case "d":
+                DivisionGame("Division game");
+                break;
+            case "q":
+                Console.WriteLine("Goodbye");
+                isGameOn = false;
+                break;
+            default:
+                Console.WriteLine("Invalid input");
+                break;
+        }
     }
+    while (isGameOn);
+
 }
 
 void AdditionGame(String message)
@@ -82,7 +91,11 @@ void AdditionGame(String message)
             Console.ReadLine();
         }
 
-        if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
+        if (i == 4)
+        {
+            Console.WriteLine($"Game over. Your final score is {score}. Press any key to go back to the main menu.");
+            Console.ReadLine();
+        }
     }
 }
 
