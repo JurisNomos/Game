@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.Design;
+﻿var date = DateTime.UtcNow;
 
-var date = DateTime.UtcNow;
+List<string> games = [];
 string name = GetName();
 
 Menu(name);
@@ -24,6 +24,7 @@ void Menu(string name)
     {
         Console.Clear();
         Console.WriteLine(@$"What game would you like to play today? Choose from the options below: 
+V - View Previous Games
 A - Addition
 S - Subtraction
 M - Multiplication
@@ -35,6 +36,9 @@ Q - Quit the program");
 
         switch (gameSelected.Trim().ToLower())
         {
+            case "v":
+                GetGames();
+                break;
             case "a":
                 AdditionGame("Addition game");
                 break;
@@ -97,6 +101,8 @@ void AdditionGame(String message)
             Console.ReadLine();
         }
     }
+
+    AddToHistory(score, "Addition");
 }
 
 void SubtractionGame(String message)
@@ -132,6 +138,8 @@ void SubtractionGame(String message)
 
         if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
     }
+
+    AddToHistory(score, "Subtraction");
 }
 
 void MultiplicationGame(String message)
@@ -167,6 +175,8 @@ void MultiplicationGame(String message)
 
         if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
     }
+
+    AddToHistory(score, "Multiplication");
 }
 
 void DivisionGame(String message)
@@ -199,6 +209,8 @@ void DivisionGame(String message)
 
         if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
     }
+
+    AddToHistory(score, "Division");
 }
 
 int[] GetDivisionNumbers()
@@ -219,4 +231,23 @@ int[] GetDivisionNumbers()
     result[1] = secondNumber;
 
     return result;
+}
+
+void GetGames()
+{
+    Console.Clear();
+    Console.WriteLine("Games History");
+    Console.WriteLine("---");
+    foreach (var game in games)
+    {
+        Console.WriteLine(game);
+    }
+    Console.WriteLine("---\n");
+    Console.WriteLine("Press any key to return to main menu");
+    Console.ReadLine();
+}
+
+void AddToHistory(int gameScore, string gameType)
+{
+    games.Add($"{DateTime.Now} - {gameType}: {gameScore} pts");
 }
