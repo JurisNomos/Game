@@ -1,3 +1,4 @@
+using Models;
 namespace MyFirstProgram
 {
     internal class GameEngine
@@ -41,7 +42,7 @@ namespace MyFirstProgram
                 }
             }
 
-            Helpers.AddToHistory(score, "Addition");
+            Helpers.AddToHistory(score, GameType.Addition);
         }
 
         internal void SubtractionGame(String message)
@@ -78,7 +79,7 @@ namespace MyFirstProgram
                 if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
             }
 
-            Helpers.AddToHistory(score, "Subtraction");
+            Helpers.AddToHistory(score, GameType.Subtraction);
         }
 
         internal void MultiplicationGame(String message)
@@ -115,7 +116,7 @@ namespace MyFirstProgram
                 if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
             }
 
-            Helpers.AddToHistory(score, "Multiplication");
+            Helpers.AddToHistory(score, GameType.Multiplication);
         }
 
         internal void DivisionGame(String message)
@@ -149,7 +150,7 @@ namespace MyFirstProgram
                 if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
             }
 
-            Helpers.AddToHistory(score, "Division");
+            Helpers.AddToHistory(score, GameType.Division);
         }
 
     }
