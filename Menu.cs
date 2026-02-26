@@ -5,8 +5,11 @@ namespace MyFirstProgram
         GameEngine gameEngine = new();
         internal void ShowMenu(string name, DateTime date)
         {
+            Console.Clear();
             Console.WriteLine("---");
-            Console.WriteLine($"Hello {name}. It's {date}. This is your math's game. That's great that you're working on improving yourself");
+            Console.WriteLine($"Hello {name}. It's {date}. This is your math's game. That's great that you're working on improving yourself\n");
+            Console.WriteLine("Press any key to show menu");
+            Console.ReadLine();
             Console.WriteLine("\n");
 
             var isGameOn = true;
