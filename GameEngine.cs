@@ -81,7 +81,11 @@ namespace Game
                     Console.ReadLine();
                 }
 
-                if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
+                if (i == 4)
+                {
+                    Console.WriteLine($"Game over. Your final score is {score}. Press any key to go back to the main menu.");
+                    Console.ReadLine();
+                }
             }
 
             Helpers.AddToHistory(score, GameType.Subtraction);
@@ -120,7 +124,11 @@ namespace Game
                     Console.ReadLine();
                 }
 
-                if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
+                if (i == 4)
+                {
+                    Console.WriteLine($"Game over. Your final score is {score}. Press any key to go back to the main menu.");
+                    Console.ReadLine();
+                }
             }
 
             Helpers.AddToHistory(score, GameType.Multiplication);
@@ -156,7 +164,11 @@ namespace Game
                     Console.ReadLine();
                 }
 
-                if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
+                if (i == 4)
+                {
+                    Console.WriteLine($"Game over. Your final score is {score}. Press any key to go back to the main menu.");
+                    Console.ReadLine();
+                }
             }
 
             Helpers.AddToHistory(score, GameType.Division);
