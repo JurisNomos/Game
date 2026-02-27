@@ -72,5 +72,15 @@ namespace Game
             }
             return name;
         }
+
+        internal static string ValidateGameSelected(string? result)
+        {
+            while (string.IsNullOrEmpty(result))
+            {
+                Console.WriteLine("Invalid input. Try again.");
+                result = Console.ReadLine();
+            }
+            return result!;
+        }
     }
 }

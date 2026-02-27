@@ -27,7 +27,7 @@ Q - Quit the program");
 
                 var gameSelected = Console.ReadLine();
 
-                gameSelected = Helpers.ValidateResult(gameSelected);
+                gameSelected = Helpers.ValidateGameSelected(gameSelected);
 
                 switch (gameSelected.Trim().ToLower())
                 {
@@ -51,7 +51,9 @@ Q - Quit the program");
                         isGameOn = false;
                         break;
                     default:
-                        Console.WriteLine("Invalid input");
+                        Console.WriteLine("Invalid input, please selected word on the menu. Try again.\n");
+                        Console.WriteLine("Type any key for the main menu");
+                        Console.ReadLine();
                         break;
                 }
             }
