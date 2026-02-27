@@ -1,9 +1,8 @@
-namespace MyFirstProgram
+namespace Game
 {
     internal class Menu
     {
-        GameEngine gameEngine = new();
-        internal void ShowMenu(string name, DateTime date)
+        internal static void ShowMenu(string name, DateTime date)
         {
             Console.Clear();
             Console.WriteLine("---");
@@ -28,22 +27,24 @@ Q - Quit the program");
 
                 var gameSelected = Console.ReadLine();
 
+                gameSelected = Helpers.ValidateResult(gameSelected);
+
                 switch (gameSelected.Trim().ToLower())
                 {
                     case "v":
                         Helpers.PrintGames();
                         break;
                     case "a":
-                        gameEngine.AdditionGame("Addition game");
+                        GameEngine.AdditionGame("Addition game");
                         break;
                     case "s":
-                        gameEngine.SubtractionGame("Subtraction game");
+                        GameEngine.SubtractionGame("Subtraction game");
                         break;
                     case "m":
-                        gameEngine.MultiplicationGame("Multiplication game");
+                        GameEngine.MultiplicationGame("Multiplication game");
                         break;
                     case "d":
-                        gameEngine.DivisionGame("Division game");
+                        GameEngine.DivisionGame("Division game");
                         break;
                     case "q":
                         Console.WriteLine("Goodbye");

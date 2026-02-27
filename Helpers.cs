@@ -1,11 +1,10 @@
-using System.Reflection.Metadata.Ecma335;
-using Models;
+using Game.Models;
 
-namespace MyFirstProgram
+namespace Game
 {
     internal class Helpers
     {
-        internal static List<Game> games = [];
+        internal static List<GameList> games = [];
 
         internal static int[] GetDivisionNumbers()
         {
@@ -43,7 +42,7 @@ namespace MyFirstProgram
 
         internal static void AddToHistory(int gameScore, GameType gameType)
         {
-            games.Add(new Game
+            games.Add(new GameList
             {
                 Date = DateTime.Now,
                 Score = gameScore,
@@ -51,14 +50,14 @@ namespace MyFirstProgram
             });
         }
 
-        internal static string ValidateResult(string result)
+        internal static string ValidateResult(string? result)
         {
             while (string.IsNullOrEmpty(result) || !Int32.TryParse(result, out _))
             {
                 Console.WriteLine("Your answer needs to be an integer. Try again.");
                 result = Console.ReadLine();
             }
-            return result;
+            return result!;
         }
 
         internal static string GetName()

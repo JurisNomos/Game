@@ -1,10 +1,10 @@
-using Models;
-namespace MyFirstProgram
+using Game.Models;
+namespace Game
 {
     internal class GameEngine
     {
 
-        internal void AdditionGame(String message)
+        internal static void AdditionGame(String message)
         {
             var random = new Random();
             var score = 0;
@@ -48,7 +48,7 @@ namespace MyFirstProgram
             Helpers.AddToHistory(score, GameType.Addition);
         }
 
-        internal void SubtractionGame(String message)
+        internal static void SubtractionGame(String message)
         {
             var random = new Random();
             var score = 0;
@@ -87,7 +87,7 @@ namespace MyFirstProgram
             Helpers.AddToHistory(score, GameType.Subtraction);
         }
 
-        internal void MultiplicationGame(String message)
+        internal static void MultiplicationGame(String message)
         {
             var random = new Random();
             var score = 0;
@@ -126,7 +126,7 @@ namespace MyFirstProgram
             Helpers.AddToHistory(score, GameType.Multiplication);
         }
 
-        internal void DivisionGame(String message)
+        internal static void DivisionGame(String message)
         {
             var score = 0;
 

@@ -1,6 +1,6 @@
-namespace Models;
+namespace Game.Models;
 
-internal class Game
+internal class GameList
 {
     public DateTime Date { get; set; }
 
