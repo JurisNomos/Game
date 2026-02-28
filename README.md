@@ -45,7 +45,7 @@ generated math questions and earn points for correct answers.
 
 ---
 
-## 📖 How to Play
+## How to Play
 
 1. Launch the game and choose a math operation from the menu.
 2. Answer at least 5 randomly generated questions.
@@ -55,7 +55,7 @@ generated math questions and earn points for correct answers.
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] Difficulty levels (Easy / Medium / Hard)
 - [ ] Timer per question
@@ -64,6 +64,6 @@ generated math questions and earn points for correct answers.
 
 ---
 
-## 📄 License
+## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
