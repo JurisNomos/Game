@@ -66,4 +66,4 @@ generated math questions and earn points for correct answers.
 
 ## License
 
-This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+This project is licensed under the [MIT License](./LICENSE.md).
